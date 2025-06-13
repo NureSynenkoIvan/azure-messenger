@@ -18,13 +18,13 @@ public class AzureCosmosDbConfiguration extends AbstractCosmosConfiguration {
     private static final Logger logger = LoggerFactory.getLogger(AzureCosmosDbConfiguration.class);
 
     @Value("${azure.cosmosdb.uri}")
-    private String uri = "https://ivan-synenko.documents.azure.com:443/";
+    private String uri;
 
     @Value("${azure.cosmosdb.key}")
-    private String key = "XpF8Tyn5ZkCl5Qif8AYK1xuwQvGAma8fhsuLvDuqS31N3Jn7lDVVZbVw2m9IifCN9C6PiaKaZjOEACDbavMLTw==";
+    private String key;
 
     @Value("${azure.cosmosdb.database}")
-    private String dbName = "messenger";
+    private String dbName;
 
     private AzureKeyCredential cosmosKeyCredential;
 
