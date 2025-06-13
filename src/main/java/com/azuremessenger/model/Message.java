@@ -2,6 +2,7 @@ package com.azuremessenger.model;
 
 import com.azure.spring.data.cosmos.core.mapping.Container;
 import com.azure.spring.data.cosmos.core.mapping.PartitionKey;
+import org.springframework.data.annotation.Id;
 
 import java.security.Timestamp;
 import java.util.Date;
@@ -9,7 +10,7 @@ import java.util.Date;
 @Container(containerName = "Messages")
 public class Message {
 
-    @PartitionKey
+    @Id
     private String id;
     private String chatId;
     private String senderId;
@@ -61,12 +62,12 @@ public class Message {
         this.content = content;
     }
 
-    public Timestamp getTimestamp() {
-        return timestamp;
+    public Date getTime() {
+        return time;
     }
 
-    public void setTimestamp(Timestamp timestamp) {
-        this.timestamp = timestamp;
+    public void setTime(Date time) {
+        this.time = time;
     }
 
     public String getReplyTo() {

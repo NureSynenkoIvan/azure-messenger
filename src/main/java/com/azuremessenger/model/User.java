@@ -2,12 +2,13 @@ package com.azuremessenger.model;
 
 import com.azure.spring.data.cosmos.core.mapping.Container;
 import com.azure.spring.data.cosmos.core.mapping.PartitionKey;
+import org.springframework.data.annotation.Id;
 
 import java.util.List;
 
 @Container(containerName = "Users")
 public class User {
-    @PartitionKey
+    @Id
     private String id;
     private String username;
     private String email;

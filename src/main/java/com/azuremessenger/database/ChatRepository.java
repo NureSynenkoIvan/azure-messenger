@@ -8,9 +8,9 @@ import java.util.List;
 
 @Repository
 public interface ChatRepository extends CosmosRepository<Chat, String> {
-    List<Chat> findByParticipantsContaining(String userId);
+    List<Chat> findByParticipantsContains(List<String> participants);
 
-    Chat getChatByChatId(String chatId);
+    Chat getChatById(String chatId);
 
-    List<Chat> findByUserId(String userId);
+    List<Chat> findByParticipantsContaining(List<String> participants);
 }

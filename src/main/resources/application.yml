@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: AzureMessenger
+azure:
+  cosmosdb:
+    uri: "https://ivan-synenko.documents.azure.com:443/"
+    key: "XpF8Tyn5ZkCl5Qif8AYK1xuwQvGAma8fhsuLvDuqS31N3Jn7lDVVZbVw2m9IifCN9C6PiaKaZjOEACDbavMLTw=="
+    database: "messenger"
