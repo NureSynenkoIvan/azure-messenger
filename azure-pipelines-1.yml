@@ -26,7 +26,11 @@ stages:
   jobs:
   - job: MavenPackageAndPublishArtifacts
     displayName: Maven Package and Publish Artifacts
-    pool: self-hosted
+    pool: 
+      name: self-hosted
+      demands:
+      - java
+      - maven
 
     steps:
     - task: Maven@4
