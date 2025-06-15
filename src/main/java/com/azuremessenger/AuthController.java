@@ -10,15 +10,16 @@ import org.springframework.web.bind.annotation.*;
 @CrossOrigin
 public class AuthController {
 
-    @Autowired
-    private ChatService chatService;
+    //@Autowired
+    //private ChatService chatService;
 
-    /*
+
     @GetMapping
+    @RequestMapping("/test")
     public ResponseEntity<String> testEndpoint() {
         return ResponseEntity.ok("Hello World");
-    }*/
-
+    }
+/*
     @PostMapping()
     public ResponseEntity registerOrLogin(@RequestParam("username") String username, @RequestBody User user) {
         try {
@@ -41,7 +42,7 @@ public class AuthController {
         }catch (Exception e) {
             return ResponseEntity.badRequest().body(e.getMessage());
         }
-    }
+    }*/
 
 
 

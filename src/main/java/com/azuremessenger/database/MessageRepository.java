@@ -7,3 +7,4 @@ import java.util.List;
 public interface MessageRepository extends CosmosRepository<Message, String> {
     List<Message> findMessagesByChatId(String chatId);
 }
+
